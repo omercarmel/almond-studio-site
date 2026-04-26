@@ -328,7 +328,27 @@
     }
 
     /* ─── ABOUT ─── */
-    .about { background: var(--bg2); }
+    .about {
+      background: var(--bg2);
+      position: relative;
+      overflow: hidden;
+    }
+    .about-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .about-bg img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      opacity: 0.12;
+    }
+    .about .container { position: relative; z-index: 1; }
 
     .about p {
       text-align: center;
@@ -427,7 +447,7 @@
     .for-whom-bg {
       position: absolute;
       inset: 0;
-      background: url("first song.png") center center / cover no-repeat;
+      background: url("recording customers4.png") center center / cover no-repeat;
       opacity: 0.13;
       pointer-events: none;
     }
@@ -999,10 +1019,10 @@
 
   <p class="hero-sub">המקום שבו השיר הראשון שלך יוצא לעולם – הקלטה מלאה, מיקס , כולל קליפ AI</p>
 
-  <div class="hero-price-pill">
+  <a class="hero-price-pill" href="recording.html" style="text-decoration:none;cursor:pointer;">
     <span class="price-label">הקלטת שיר מלאה</span>
     <span class="price-value">~₪1000</span>
-  </div>
+  </a>
 
   <p class="hero-note">מתאים לזמרים מתחילים, דמואים ושירים בתקציב נגיש</p>
   <p class="hero-ai">🎬 <a href="https://wa.me/972548123474" style="color:var(--orange);font-weight:700;text-decoration:none;">כולל קליפ AI במחיר!</a></p>
@@ -1020,6 +1040,9 @@
 
 <!-- ABOUT -->
 <section class="about fade-in">
+  <div class="about-bg">
+    <img src="recording customers3.png" alt="" loading="lazy">
+  </div>
   <div class="container">
     <h2 class="section-title">מי אנחנו</h2>
     <div class="section-underline"></div>
@@ -1055,7 +1078,7 @@
     <div class="services-card">
       <h3>הקלטת שיר מלאה כוללת:</h3>
       <div class="services-grid">
-        <div class="service-item">
+        <a class="service-item" href="recording.html" style="text-decoration:none;color:inherit;">
           <div class="service-icon music">
             <svg viewBox="0 0 24 24"><path d="M9 3v10.55A4 4 0 1 0 11 17V7h4V3z"/></svg>
           </div>
@@ -1063,8 +1086,8 @@
             <h4>הקלטת כלי נגינה</h4>
             <p>עיבוד מוזיקלי מלא</p>
           </div>
-        </div>
-        <div class="service-item">
+        </a>
+        <a class="service-item" href="recording.html" style="text-decoration:none;color:inherit;">
           <div class="service-icon mic">
             <svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zm-1 18.93V22h2v-2.07A8.001 8.001 0 0 0 20 12h-2a6 6 0 0 1-12 0H4a8.001 8.001 0 0 0 7 7.93z"/></svg>
           </div>
@@ -1072,8 +1095,8 @@
             <h4>הקלטת שירה מקצועית</h4>
             <p>הקלטה איכותית של הווקאלים שלך</p>
           </div>
-        </div>
-        <div class="service-item">
+        </a>
+        <a class="service-item" href="https://www.youtube.com/@Almond-Studio-h3v" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">
           <div class="service-icon head">
             <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="white"/></svg>
           </div>
@@ -1081,8 +1104,8 @@
             <h4>קליפ AI</h4>
             <p>בחירת קונספט לקליפ</p>
           </div>
-        </div>
-        <div class="service-item">
+        </a>
+        <a class="service-item" href="recording.html" style="text-decoration:none;color:inherit;">
           <div class="service-icon wave">
             <svg viewBox="0 0 24 24"><path d="M3 12h2l2-8 4 16 4-12 2 4h4"/><path d="M3 12h2l2-8 4 16 4-12 2 4h4" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
           </div>
@@ -1090,7 +1113,7 @@
             <h4>מיקס</h4>
             <p>איזון והרמוניה של כל הרכיבים</p>
           </div>
-        </div>
+        </a>
       </div>
 
       <div class="price-tag">המחיר סביב ₪1000 לשיר</div>
@@ -1110,7 +1133,7 @@
         <div class="testimonial-author">
           <div class="testimonial-avatar">נ</div>
           <div>
-            <div class="testimonial-name">נועה מ.</div>
+            <div class="testimonial-name">נועה</div>
             <div class="testimonial-context">שיר ראשון · חיפה</div>
           </div>
         </div>
@@ -1120,7 +1143,7 @@
         <div class="testimonial-author">
           <div class="testimonial-avatar">ד</div>
           <div>
-            <div class="testimonial-name">דני ר.</div>
+            <div class="testimonial-name">רועי</div>
             <div class="testimonial-context">מתנה מוזיקלית · קריות</div>
           </div>
         </div>
@@ -1130,7 +1153,7 @@
         <div class="testimonial-author">
           <div class="testimonial-avatar">מ</div>
           <div>
-            <div class="testimonial-name">מיכל ק.</div>
+            <div class="testimonial-name">שירן</div>
             <div class="testimonial-context">דמו · חיפה</div>
           </div>
         </div>
@@ -1163,11 +1186,11 @@
   <div class="container">
     <h2 class="section-title">כמה עולה להקליט שיר</h2>
     <div class="section-underline"></div>
-    <div class="price-card">
+    <a class="price-card" href="recording.html" style="text-decoration:none;color:inherit;display:block;">
       <h3>הקלטת שיר מלאה כולל מיקס </h3>
       <div class="amount">~₪1000</div>
       <p class="per">לשיר</p>
-    </div>
+    </a>
     <div class="compare-note">
       בהשוואה לאולפנים המקצועיים המחיר נע בין ₪3000 לעשרות אלפי שקלים לשיר. <a href="https://wa.me/972548123474">Almond Studio</a> מציע פתרון נגיש וזול יותר להקלטת שיר ראשון.
     </div>
